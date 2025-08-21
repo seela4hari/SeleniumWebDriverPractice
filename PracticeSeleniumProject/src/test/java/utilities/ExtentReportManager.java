@@ -4,19 +4,10 @@ package utilities;
 
 import java.awt.Desktop;
 import java.io.File;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import javax.activation.DataSource;
-
-import org.apache.commons.mail.DataSourceResolver;
-import org.apache.commons.mail.DefaultAuthenticator;
-import org.apache.commons.mail.ImageHtmlEmail;
-import org.apache.commons.mail.resolver.DataSourceUrlResolver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -37,7 +28,6 @@ public class ExtentReportManager implements ITestListener {
 	String reportName;
 	
 	public void onStart(ITestContext context) {
-
 		
 		String timeStamp = new SimpleDateFormat("MM.dd.yyyy.HH.mm.ss").format(new Date()); //time stamp
 		reportName = "Test-Report-"+timeStamp+".html";
