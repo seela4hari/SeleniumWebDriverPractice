@@ -15,7 +15,9 @@ public class BrowserMethodsDemo {
 		driver.findElement(By.linkText("OrangeHRM, Inc")).click();
 		Thread.sleep(10000);
 		//driver.close();
+		System.out.println("Driver closing.......");
 		driver.quit();
+		
 		
 
 	}
